@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>1.4 Cryptography</title>
+</head>
+<body>
+    <div class="container">
+        <h1>1.4 Cryptography</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container">
+            <a href="/" class="home-icon">🏠</a>
+        </div>
+        
+        <!-- Public key infrastructure (PKI) -->
+        <div class="section" id="section-1">
+            <h2>Public key infrastructure (PKI)</h2>
+            
+            <!-- Public key -->
+            <div class="category" id="public-key">
+                <h3>Public key</h3>
+                <p>A public key is a cryptographic key that is shared publicly and used for encryption or signature verification.</p>
+                <p><strong>Example:</strong> Securing online transactions with SSL/TLS certificates.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PublicKey
+                        publickey -->|Shared publicly| EncryptionSignatureVerification
+                    end
+                </div>
+            </div>
+            
+            <!-- Private key -->
+            <div class="category" id="private-key">
+                <h3>Private key</h3>
+                <p>A private key is a cryptographic key kept secret and used for decryption or signature generation.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PrivateKey
+                        privatekey -->|Kept secret| DecryptionSignatureGeneration
+                    end
+                </div>
+            </div>
+            
+            <!-- Key escrow -->
+            <div class="category" id="key-escrow">
+                <h3>Key escrow</h3>
+                <p>Key escrow is a process where cryptographic keys are stored with a trusted third party for recovery purposes.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph KeyEscrow
+                        keyescrow -->|Stored with third party| Recovery
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Encryption -->
+        <div class="section" id="section-2">
+            <h2>Encryption</h2>
+            
+            <!-- Level -->
+            <div class="category" id="encryption-level">
+                <h3>Level</h3>
+                
+                <!-- Full-disk -->
+                <div class="subcategory" id="full-disk">
+                    <h4>Full-disk</h4>
+                    <p>Full-disk encryption protects an entire storage device, including the operating system and data.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph FullDiskEncryption
+                            fulldisk -->|Protects entire device| OSData
+                        end
+                    </div>
+                </div>
+                
+                <!-- Partition -->
+                <div class="subcategory" id="partition">
+                    <h4>Partition</h4>
+                    <p>Partition-level encryption secures individual partitions on a storage device.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph PartitionEncryption
+                            partition -->|Secures individual partitions| StoragePartitions
+                        end
+                    </div>
+                </div>
+                
+                <!-- File -->
+                <div class="subcategory" id="file">
+                    <h4>File</h4>
+                    <p>File-level encryption protects individual files or directories.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph FileEncryption
+                            file -->|Protects individual files| FilesDirectories
+                        end
+                    </div>
+                </div>
+                
+                <!-- Volume -->
+                <div class="subcategory" id="volume">
+                    <h4>Volume</h4>
+                    <p>Volume-level encryption secures specific storage volumes.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph VolumeEncryption
+                            volume -->|Secures specific volumes| StorageVolumes
+                        end
+                    </div>
+                </div>
+                
+                <!-- Database -->
+                <div class="subcategory" id="database">
+                    <h4>Database</h4>
+                    <p>Database encryption protects data stored within a database.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph DatabaseEncryption
+                            database -->|Protects data in databases| Data
+                        end
+                    </div>
+                </div>
+                
+                <!-- Record -->
+                <div class="subcategory" id="record">
+                    <h4>Record</h4>
+                    <p>Record-level encryption secures individual records or data elements within a database.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph RecordEncryption
+                            record -->|Secures individual records| DataElements
+                        end
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Transport/communication -->
+            <div class="category" id="transport-communication">
+                <h3>Transport/communication</h3>
+                <p>Encryption in transport or communication secures data during transmission.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph TransportCommunicationEncryption
+                        transport -->|Secures data during transmission| SecureTransmission
+                    end
+                </div>
+            </div>
+            
+            <!-- Asymmetric -->
+            <div class="category" id="asymmetric">
+                <h3>Asymmetric</h3>
+                <p>Asymmetric encryption uses a pair of public and private keys for encryption and decryption.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AsymmetricEncryption
+                        asymmetric -->|Uses public and private keys| EncryptionDecryption
+                    end
+                </div>
+            </div>
+            
+            <!-- Symmetric -->
+            <div class="category" id="symmetric">
+                <h3>Symmetric</h3>
+                <p>Symmetric encryption uses the same key for both encryption and decryption.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SymmetricEncryption
+                        symmetric -->|Uses the same key| EncryptionDecryption
+                    end
+                </div>
+            </div>
+            
+            <!-- Key exchange -->
+            <div class="category" id="key-exchange">
+                <h3>Key exchange</h3>
+                <p>Key exchange protocols facilitate the secure exchange of encryption keys.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph KeyExchange
+                        keyexchange -->|Facilitates secure key exchange| EncryptionKeys
+                    end
+                </div>
+            </div>
+            
+            <!-- Algorithms -->
+            <div class="category" id="algorithms">
+                <h3>Algorithms</h3>
+                <p>Cryptographic algorithms define the mathematical functions used in encryption and decryption.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CryptographicAlgorithms
+                        algorithms -->|Define mathematical functions| EncryptionDecryption
+                    end
+                </div>
+            </div>
+            
+            <!-- Key length -->
+            <div class="category" id="key-length">
+                <h3>Key length</h3>
+                <p>Key length refers to the size or length of encryption keys, which impacts security.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph KeyLength
+                        keylength -->|Impacts security| EncryptionStrength
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="section" id="section-3">
+        <h2>Tools</h2>
+            
+            <!-- Trusted Platform Module (TPM) -->
+            <div class="category" id="trusted-platform-module">
+                <h3>Trusted Platform Module (TPM)</h3>
+                <p>TPM is a hardware-based security module that provides secure storage and cryptographic operations.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph TPM
+                        tpm -->|Hardware-based security| SecureStorageCrypto
+                    end
+                </div>
+            </div>
+            
+            <!-- Hardware security module (HSM) -->
+            <div class="category" id="hardware-security-module">
+                <h3>Hardware security module (HSM)</h3>
+                <p>HSM is a dedicated hardware device for secure key management and cryptographic operations.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph HSM
+                        hsm -->|Dedicated hardware device| SecureKeyManagementCrypto
+                    end
+                </div>
+            </div>
+            
+            <!-- Key management system -->
+            <div class="category" id="key-management-system">
+                <h3>Key management system</h3>
+                <p>A key management system helps manage cryptographic keys throughout their lifecycle.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph KeyManagementSystem
+                        keymanagement -->|Manages key lifecycle| KeyLifecycle
+                    end
+                </div>
+            </div>
+            
+            <!-- Secure enclave -->
+            <div class="category" id="secure-enclave">
+                <h3>Secure enclave</h3>
+                <p>A secure enclave is a protected area in a processor that handles sensitive data and operations.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SecureEnclave
+                        secureenclave -->|Protects sensitive data| SecureDataOperations
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Obfuscation -->
+        <div class="section" id="section-4">
+            <h2>Obfuscation</h2>
+            
+            <!-- Steganography -->
+            <div class="category" id="steganography">
+                <h3>Steganography</h3>
+                <p>Steganography hides data within other non-secret data, making it difficult to detect.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Steganography
+                        steganography -->|Hides data within non-secret data| DataHiding
+                    end
+                </div>
+            </div>
+            
+            <!-- Tokenization -->
+            <div class="category" id="tokenization">
+                <h3>Tokenization</h3>
+                <p>Tokenization replaces sensitive data with tokens, preserving the original data's format.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Tokenization
+                        tokenization -->|Replaces data with tokens| DataReplacement
+                    end
+                </div>
+            </div>
+            
+            <!-- Data masking -->
+            <div class="category" id="data-masking">
+                <h3>Data masking</h3>
+                <p>Data masking disguises sensitive data while keeping the format intact for testing or non-production use.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DataMasking
+                        datamasking -->|Disguises sensitive data| DataDisguise
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Hashing -->
+        <div class="section" id="section-5">
+            <h2>Hashing</h2>
+            <p>Hashing is the process of converting data into a fixed-size string of characters.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph Hashing
+                    hashing -->|Converts data into a fixed-size string| DataConversion
+                end
+            </div>
+        </div>
+
+        <!-- Salting -->
+        <div class="section" id="section-6">
+            <h2>Salting</h2>
+            <p>Salting involves adding random data (a "salt") to data before hashing to increase security.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph Salting
+                    salting -->|Adds random data before hashing| DataSalting
+                end
+            </div>
+        </div>
+
+        <!-- Digital signatures -->
+        <div class="section" id="section-7">
+            <h2>Digital Signatures</h2>
+            <p>Digital signatures verify the authenticity and integrity of digital messages or documents.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph DigitalSignatures
+                    digitalsignatures -->|Verifies authenticity and integrity| MessageVerification
+                end
+            </div>
+        </div>
+
+        <!-- Key stretching -->
+        <div class="section" id="section-8">
+            <h2>Key Stretching</h2>
+            <p>Key stretching makes cryptographic keys more resistant to brute force attacks.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph KeyStretching
+                    keystretching -->|Enhances resistance to brute force attacks| KeyEnhancement
+                end
+            </div>
+        </div>
+
+        <!-- Blockchain -->
+        <div class="section" id="section-9">
+            <h2>Blockchain</h2>
+            <p>Blockchain is a decentralized and secure distributed ledger technology.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph Blockchain
+                    blockchain -->|Decentralized and secure ledger| DistributedLedger
+                end
+            </div>
+        </div>
+
+        <!-- Open public ledger -->
+        <div class="section" id="section-10">
+            <h2>Open Public Ledger</h2>
+            <p>An open public ledger is a publicly accessible blockchain.</p>
+            <div class="mermaid">
+                flowchart
+                subgraph OpenPublicLedger
+                    openledger -->|Publicly accessible blockchain| AccessibleBlockchain
+                end
+            </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="section" id="section-11">
+            <h2>Certificates</h2>
+            
+            <!-- Certificate authorities -->
+            <div class="category" id="certificate-authorities">
+                <h3>Certificate Authorities</h3>
+                <p>Certificate authorities issue digital certificates, verifying the identity of entities.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CertificateAuthorities
+                        authorities -->|Issue digital certificates| IdentityVerification
+                    end
+                </div>
+            </div>
+            
+            <!-- Certificate revocation lists (CRLs) -->
+            <div class="category" id="certificate-revocation-lists">
+                <h3>Certificate Revocation Lists (CRLs)</h3>
+                <p>CRLs contain information about revoked digital certificates.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CertificateRevocationLists
+                        crls -->|Contain information about revoked certificates| RevokedCertificateInfo
+                    end
+                </div>
+            </div>
+            
+            <!-- Online Certificate Status Protocol (OCSP) -->
+            <div class="category" id="online-certificate-status-protocol">
+                <h3>Online Certificate Status Protocol (OCSP)</h3>
+                <p>OCSP checks the revocation status of a digital certificate in real-time.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph OCSP
+                        ocsp -->|Real-time certificate status checks| CertificateStatusCheck
+                    end
+                </div>
+            </div>
+            
+            <!-- Self-signed -->
+            <div class="category" id="self-signed">
+                <h3>Self-signed Certificates</h3>
+                <p>Self-signed certificates are signed by the entity they belong to, not by a certificate authority.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SelfSignedCertificates
+                        selfsigned -->|Signed by the entity| EntitySigning
+                    end
+                </div>
+            </div>
+            
+            <!-- Third-party -->
+            <div class="category" id="third-party">
+                <h3>Third-party Certificates</h3>
+                <p>Third-party certificates are issued by trusted certificate authorities.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ThirdPartyCertificates
+                        thirdparty -->|Issued by trusted authorities| TrustedIssuance
+                    end
+                </div>
+            </div>
+            
+            <!-- Root of trust -->
+            <div class="category" id="root-of-trust">
+                <h3>Root of Trust</h3>
+                <p>The root of trust is the most trusted entity in a public key infrastructure.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph RootOfTrust
+                        rootoftrust -->|Most trusted entity| TrustedEntity
+                    end
+                </div>
+            </div>
+            
+            <!-- Certificate signing request (CSR) generation -->
+            <div class="category" id="csr-generation">
+                <h3>Certificate Signing Request (CSR) Generation</h3>
+                <p>A CSR is a request for a digital certificate, typically generated by the entity.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CSRGeneration
+                        csr -->|Request for a digital certificate| CertificateRequest
+                    end
+                </div>
+            </div>
+            
+            <!-- Wildcard -->
+            <div class="category" id="wildcard-certificates">
+                <h3>Wildcard Certificates</h3>
+                <p>Wildcard certificates secure a domain and its subdomains using a single certificate.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph WildcardCertificates
+                        wildcard -->|Secures a domain and subdomains| DomainSecurity
+                    end
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

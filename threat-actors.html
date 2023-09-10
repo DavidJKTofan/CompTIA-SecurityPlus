@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>2.1 Common Threat Actors and Motivations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>2.1 Common Threat Actors and Motivations</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container">
+            <a href="/" class="home-icon">🏠</a>
+        </div>
+
+        <!-- Threat Actors Category -->
+        <div class="section" id="section-1">
+            <h2>Threat Actors</h2>
+            <p>Threat actors are individuals or groups who pose security risks to organizations.</p>
+            
+            <!-- Nation-state -->
+            <div class="category" id="nation-state">
+                <h3>Nation-state</h3>
+                <p>Nation-state actors are government-sponsored entities involved in cyber espionage or attacks.</p>
+                <p><strong>Example:</strong> A foreign government targeting critical infrastructure.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph NationState
+                        nationstate -->|Government-sponsored entities| CyberEspionage
+                    end
+                </div>
+            </div>
+            
+            <!-- Unskilled attacker -->
+            <div class="category" id="unskilled-attacker">
+                <h3>Unskilled Attacker</h3>
+                <p>Unskilled attackers lack expertise and use simple attack methods.</p>
+                <p><strong>Example:</strong> An individual attempting a basic phishing attack.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph UnskilledAttacker
+                        unskilled -->|Lacks expertise, simple methods| BasicPhishing
+                    end
+                </div>
+            </div>
+            
+            <!-- Hacktivist -->
+            <div class="category" id="hacktivist">
+                <h3>Hacktivist</h3>
+                <p>Hacktivists are individuals or groups using cyberattacks for political or social causes.</p>
+                <p><strong>Example:</strong> A hacktivist group targeting a government website for protest.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Hacktivist
+                        hacktivist -->|Cyberattacks for political/social causes| WebsiteProtest
+                    end
+                </div>
+            </div>
+            
+            <!-- Insider threat -->
+            <div class="category" id="insider-threat">
+                <h3>Insider Threat</h3>
+                <p>Insider threats originate from within an organization, such as employees or contractors.</p>
+                <p><strong>Example:</strong> A disgruntled employee leaking sensitive data.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph InsiderThreat
+                        insider -->|Originates from within, employees/contractors| DataLeakage
+                    end
+                </div>
+            </div>
+            
+            <!-- Organized crime -->
+            <div class="category" id="organized-crime">
+                <h3>Organized Crime</h3>
+                <p>Organized crime groups engage in cybercriminal activities for financial gain.</p>
+                <p><strong>Example:</strong> A criminal syndicate involved in ransomware attacks.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph OrganizedCrime
+                        organizedcrime -->|Cybercriminal activities for financial gain| RansomwareAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Shadow IT -->
+            <div class="category" id="shadow-it">
+                <h3>Shadow IT</h3>
+                <p>Shadow IT refers to unauthorized or unmanaged technology within an organization.</p>
+                <p><strong>Example:</strong> Employees using unapproved cloud services for work.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ShadowIT
+                        shadowit -->|Unauthorized/unmanaged technology| CloudServiceUsage
+                    end
+                </div>
+            </div>
+        </div>
+        
+        <!-- Attributes of Actors Category -->
+        <div class="section" id="section-2">
+            <h2>Attributes of Actors</h2>
+            <p>Attributes describe characteristics of threat actors.</p>
+            
+            <!-- Internal/external -->
+            <div class="category" id="internal-external">
+                <h3>Internal/External</h3>
+                <p>Threat actors can be internal (within the organization) or external (outside the organization).</p>
+                <p><strong>Example:</strong> An internal employee (internal) versus a hacker (external).</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph InternalExternal
+                        internalexternal -->|Can be internal or external| InternalEmployee
+                        internalexternal -->|Can be internal or external| Hacker
+                    end
+                </div>
+            </div>
+            
+            <!-- Resources/funding -->
+            <div class="category" id="resources-funding">
+                <h3>Resources/Funding</h3>
+                <p>Threat actors may have access to resources or funding for cyberattacks.</p>
+                <p><strong>Example:</strong> A well-funded criminal organization versus an individual hacker.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ResourcesFunding
+                        resourcesfunding -->|May have access to resources or funding| CriminalOrganization
+                        resourcesfunding -->|May have access to resources or funding| IndividualHacker
+                    end
+                </div>
+            </div>
+            
+            <!-- Level of sophistication/capability -->
+            <div class="category" id="sophistication-capability">
+                <h3>Level of Sophistication/Capability</h3>
+                <p>Threat actors vary in their level of sophistication and capability to execute attacks.</p>
+                <p><strong>Example:</strong> A highly skilled nation-state actor versus a script kiddie.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SophisticationCapability
+                        sophisticationcapability -->|Vary in sophistication and capability| NationStateActor
+                        sophisticationcapability -->|Vary in sophistication and capability| ScriptKiddie
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Motivations Category -->
+        <div class="section" id="section-3">
+            <h2>Motivations</h2>
+            <p>Motivations drive threat actors to engage in cyberattacks.</p>
+            
+            <!-- Data exfiltration -->
+            <div class="category" id="data-exfiltration">
+                <h3>Data Exfiltration</h3>
+                <p>Data exfiltration involves stealing sensitive information for various purposes.</p>
+                <p><strong>Example:</strong> A hacker stealing customer data for sale on the dark web.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DataExfiltration
+                        dataexfiltration -->|Stealing sensitive data| CustomerDataTheft
+                    end
+                </div>
+            </div>
+            
+            <!-- Espionage -->
+            <div class="category" id="espionage">
+                <h3>Espionage</h3>
+                <p>Espionage activities aim to gather intelligence and sensitive information.</p>
+                <p><strong>Example:</strong> A nation-state actor spying on a foreign government's activities.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Espionage
+                        espionage -->|Gathering intelligence| ForeignGovernmentSpying
+                    end
+                </div>
+            </div>
+            
+            <!-- Service disruption -->
+            <div class="category" id="service-disruption">
+                <h3>Service Disruption</h3>
+                <p>Service disruption attacks target the availability and functionality of systems or services.</p>
+                <p><strong>Example:</strong> A DDoS attack causing a website outage.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ServiceDisruption
+                        servicedisruption -->|Targeting availability/functionality| DDoSAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Blackmail -->
+            <div class="category" id="blackmail">
+                <h3>Blackmail</h3>
+                <p>Blackmail involves coercing victims by threatening to reveal sensitive information.</p>
+                <p><strong>Example:</strong> Threatening to expose compromising photos unless a ransom is paid.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Blackmail
+                        blackmail -->|Coercing by revealing sensitive information| CompromisingPhotosThreat
+                    end
+                </div>
+            </div>
+            
+            <!-- Financial gain -->
+            <div class="category" id="financial-gain">
+                <h3>Financial Gain</h3>
+                <p>Threat actors engage in cybercrime to profit financially.</p>
+                <p><strong>Example:</strong> Stealing credit card information for fraudulent transactions.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph FinancialGain
+                        financialgain -->|Engaging in cybercrime for profit| CreditCardFraud
+                    end
+                </div>
+            </div>
+            
+            <!-- Philosophical/political beliefs -->
+            <div class="category" id="philosophical-political-beliefs">
+                <h3>Philosophical/Political Beliefs</h3>
+                <p>Some actors pursue cyber activities aligned with their philosophical or political ideologies.</p>
+                <p><strong>Example:</strong> Hacking government websites to promote a political cause.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PhilosophicalPoliticalBeliefs
+                        philosophicalpoliticalbeliefs -->|Pursuing activities aligned with beliefs| PoliticalWebsiteHacking
+                    end
+                </div>
+            </div>
+            
+            <!-- Ethical -->
+            <div class="category" id="ethical">
+                <h3>Ethical</h3>
+                <p>Ethical motivations drive actors to expose wrongdoing or security vulnerabilities.</p>
+                <p><strong>Example:</strong> An ethical hacker discovering and reporting a security flaw.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Ethical
+                        ethical -->|Exposing wrongdoing or vulnerabilities| SecurityFlawReporting
+                    end
+                </div>
+            </div>
+            
+            <!-- Revenge -->
+            <div class="category" id="revenge">
+                <h3>Revenge</h3>
+                <p>Revenge-driven actors seek retaliation against individuals or organizations.</p>
+                <p><strong>Example:</strong> An ex-employee launching an attack against their former employer.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Revenge
+                        revenge -->|Seeking retaliation| ExEmployeeRetaliation
+                    end
+                </div>
+            </div>
+            
+            <!-- Disruption/chaos -->
+            <div class="category" id="disruption-chaos">
+                <h3>Disruption/Chaos</h3>
+                <p>Some actors aim to create chaos or disrupt critical systems.</p>
+                <p><strong>Example:</strong> A cyberterrorist targeting power grids for chaos.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DisruptionChaos
+                        disruptionchaos -->|Aiming to create chaos/disruption| PowerGridCyberattack
+                    end
+                </div>
+            </div>
+            
+            <!-- War -->
+            <div class="category" id="war">
+                <h3>War</h3>
+                <p>In some cases, threat actors engage in cyber warfare during conflicts.</p>
+                <p><strong>Example:</strong> State-sponsored cyberattacks during international conflicts.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph War
+                        war -->|Engaging in cyber warfare during conflicts| CyberWarfareDuringConflict
+                    end
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
