@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>1.3 Change Management Processes and the Impact to Security</title>
+</head>
+<body>
+    <div class="container">
+        <h1>1.3 Change Management Processes and the Impact to Security</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container">
+            <a href="/" class="home-icon">🏠</a>
+        </div>
+        
+        <!-- Business processes impacting security operation -->
+        <div class="section" id="section-1">
+            <h2>Business processes impacting security operation</h2>
+            
+            <!-- Approval process -->
+            <div class="category" id="approval-process">
+                <h3>Approval process</h3>
+                <p>Approval processes are necessary to review and authorize changes to ensure security compliance.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ApprovalProcess
+                        approval -->|Review and authorize| SecurityCompliance
+                    end
+                </div>
+            </div>
+
+            <!-- Ownership -->
+            <div class="category" id="ownership">
+                <h3>Ownership</h3>
+                <p>Clearly defining ownership of security-related changes helps in accountability and control.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Ownership
+                        ownership -->|Define ownership| Accountability
+                    end
+                </div>
+            </div>
+
+            <!-- Stakeholders -->
+            <div class="category" id="stakeholders">
+                <h3>Stakeholders</h3>
+                <p>Involving relevant stakeholders ensures that security concerns are addressed during the change process.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Stakeholders
+                        stakeholders -->|Involve relevant parties| SecurityConcerns
+                    end
+                </div>
+            </div>
+
+            <!-- Impact analysis -->
+            <div class="category" id="impact-analysis">
+                <h3>Impact analysis</h3>
+                <p>Assessing the potential impact of changes on security helps in risk mitigation.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ImpactAnalysis
+                        impact -->|Assess potential impact| RiskMitigation
+                    end
+                </div>
+            </div>
+
+            <!-- Test results -->
+            <div class="category" id="test-results">
+                <h3>Test results</h3>
+                <p>Thorough testing of changes is essential to ensure that security controls are not compromised.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph TestResults
+                        testing -->|Ensure security controls| SecurityIntegrity
+                    end
+                </div>
+            </div>
+
+            <!-- Backout plan -->
+            <div class="category" id="backout-plan">
+                <h3>Backout plan</h3>
+                <p>A well-defined backout plan is crucial to revert changes in case of security issues.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph BackoutPlan
+                        backout -->|Revert changes| SecurityRecovery
+                    end
+                </div>
+            </div>
+
+            <!-- Maintenance window -->
+            <div class="category" id="maintenance-window">
+                <h3>Maintenance window</h3>
+                <p>Setting maintenance windows helps in scheduling changes during low-impact periods.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph MaintenanceWindow
+                        window -->|Schedule changes| LowImpactPeriods
+                    end
+                </div>
+            </div>
+
+            <!-- Standard operating procedure -->
+            <div class="category" id="standard-operating-procedure">
+                <h3>Standard operating procedure</h3>
+                <p>Following established SOPs ensures that security practices are maintained during changes.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SOP
+                        sop -->|Follow established procedures| SecurityPractices
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical implications -->
+        <div class="section" id="section-2">
+            <h2>Technical implications</h2>
+
+            <!-- Allow lists/deny lists -->
+            <div class="category" id="allow-lists-deny-lists">
+                <h3>Allow lists/deny lists</h3>
+                <p>Configuring allow lists and deny lists can control which resources and activities are permitted or restricted.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AllowDenyLists
+                        allowdeny -->|Control resource access| ResourceControl
+                    end
+                </div>
+            </div>
+
+            <!-- Restricted activities -->
+            <div class="category" id="restricted-activities">
+                <h3>Restricted activities</h3>
+                <p>Identifying and restricting certain activities can enhance security and prevent unauthorized actions.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph RestrictedActivities
+                        restricted -->|Prevent unauthorized actions| SecurityEnhancement
+                    end
+                </div>
+            </div>
+
+            <!-- Downtime -->
+            <div class="category" id="downtime">
+                <h3>Downtime</h3>
+                <p>Managing downtime is critical to minimize disruptions during changes and maintain operational integrity.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DowntimeManagement
+                        downtime -->|Minimize disruptions| OperationalIntegrity
+                    end
+                </div>
+            </div>
+
+            <!-- Service restart -->
+            <div class="category" id="service-restart">
+                <h3>Service restart</h3>
+                <p>Planning service restarts can help apply changes effectively and ensure continuous operation.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ServiceRestart
+                        restart -->|Apply changes effectively| ContinuousOperation
+                    end
+                </div>
+            </div>
+
+            <!-- Application restart -->
+            <div class="category" id="application-restart">
+                <h3>Application restart</h3>
+                <p>Restarting applications after changes may be necessary to ensure proper functionality.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AppRestart
+                        apprestart -->|Ensure proper functionality| ApplicationHealth
+                    end
+                </div>
+            </div>
+
+            <!-- Legacy applications -->
+            <div class="category" id="legacy-applications">
+                <h3>Legacy applications</h3>
+                <p>Handling legacy applications requires special considerations to maintain security and compatibility.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph LegacyApps
+                        legacy -->|Maintain security and compatibility| SpecialConsiderations
+                    end
+                </div>
+            </div>
+
+            <!-- Dependencies -->
+            <div class="category" id="dependencies">
+                <h3>Dependencies</h3>
+                <p>Identifying and managing dependencies ensures that changes do not disrupt interconnected systems.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DependenciesManagement
+                        dependencies -->|Prevent disruptions| InterconnectedSystems
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation -->
+        <div class="section" id="section-3">
+            <h2>Documentation</h2>
+
+            <!-- Updating diagrams -->
+            <div class="category" id="updating-diagrams">
+                <h3>Updating diagrams</h3>
+                <p>Updating diagrams helps visualize changes and maintain accurate representations of the environment.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph UpdatingDiagrams
+                        diagrams -->|Visualize changes| AccurateRepresentations
+                    end
+                </div>
+            </div>
+
+            <!-- Updating policies/procedures -->
+            <div class="category" id="updating-policies-procedures">
+                <h3>Updating policies/procedures</h3>
+                <p>Updating policies and procedures ensures that they reflect the current security practices and requirements.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph UpdatingPoliciesProcedures
+                        policies -->|Reflect current practices| CurrentSecurityRequirements
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Version control -->
+        <div class="section" id="section-4">
+            <h2>Version control</h2>
+
+            <!-- Version control overview -->
+            <div class="category" id="version-control-overview">
+                <h3>Version control overview</h3>
+                <p>Version control systems help manage changes, track revisions, and maintain historical records of configurations.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph VersionControlOverview
+                        versioncontrol -->|Manage changes| TrackRevisions
+                        versioncontrol -->|Maintain historical records| ConfigurationHistory
+                    end
+                </div>
+            </div>
+
+            <!-- Benefits of version control -->
+            <div class="category" id="benefits-of-version-control">
+                <h3>Benefits of version control</h3>
+                <p>Implementing version control offers numerous advantages, including collaboration, auditability, and rollback capabilities.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph VersionControlBenefits
+                        versionbenefits -->|Enable collaboration| CollaborativeEfforts
+                        versionbenefits -->|Enhance auditability| AuditTrail
+                        versionbenefits -->|Facilitate rollbacks| RollbackCapabilities
+                    end
+                </div>
+            </div>
+
+            <!-- Version control best practices -->
+            <div class="category" id="version-control-best-practices">
+                <h3>Version control best practices</h3>
+                <p>Following best practices in version control ensures efficient and effective management of changes.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph VersionControlBestPractices
+                        bestpractices -->|Efficient management| EfficientManagement
+                        bestpractices -->|Effective tracking| TrackingChanges
+                    end
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
