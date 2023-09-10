@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>1.1 Security Controls</title>
+</head>
+<body>
+    <div class="container">
+        <h1>1.1 Security Controls</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container"></div>
+        
+        <!-- Categories -->
+        <div class="section" id="section-1">
+            <h2>Categories</h2>
+            <!-- Technical -->
+            <div class="category" id="technical">
+                <h3>Technical</h3>
+                <p>Technical security controls involve the use of technology to protect systems and data.</p>
+                <p><strong>Example:</strong> Firewall filtering network traffic based on rules.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Firewall
+                        firewall -->|Inspect traffic| Application
+                        firewall -->|Allow/Deny| Network
+                        firewall -->|Log events| Logging
+                    end
+                </div>
+            </div>
+            <!-- Managerial -->
+            <div class="category" id="managerial">
+                <h3>Managerial</h3>
+                <p>Managerial security controls focus on policies, procedures, and governance.</p>
+                <p><strong>Example:</strong> Developing a security policy that outlines acceptable use of company resources.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Policy
+                        policy -->|Define rules| Resources
+                        policy -->|Enforce rules| Employees
+                    end
+                </div>
+            </div>
+            <!-- Operational -->
+            <div class="category" id="operational">
+                <h3>Operational</h3>
+                <p>Operational security controls deal with day-to-day tasks and processes to maintain security.</p>
+                <p><strong>Example:</strong> Conducting regular security training for employees.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Training
+                        training -->|Plan sessions| Employees
+                        training -->|Conduct sessions| Instructors
+                    end
+                </div>
+            </div>
+            <!-- Physical -->
+            <div class="category" id="physical">
+                <h3>Physical</h3>
+                <p>Physical security controls safeguard the physical environment and assets.</p>
+                <p><strong>Example:</strong> Installing security cameras to monitor the data center's entrance.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SecurityCameras
+                        cameras -->|Monitor| Entrance
+                        cameras -->|Record footage| Storage
+                    end
+                </div>
+            </div>
+        </div>
+        
+        <!-- Control Types -->
+        <div class="section" id="section-2">
+            <h2>Control Types</h2>
+            <!-- Preventive -->
+            <div class="category" id="preventive">
+                <h3>Preventive</h3>
+                <p>Preventive security controls aim to stop security incidents from happening.</p>
+                <p><strong>Example:</strong> Installing antivirus software on all computers.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PreventiveControl
+                        antivirus -->|Scan files| Malware
+                        antivirus -->|Update definitions| AntivirusVendor
+                    end
+                </div>
+            </div>
+            <!-- Deterrent -->
+            <div class="category" id="deterrent">
+                <h3>Deterrent</h3>
+                <p>Deterrent security controls discourage potential attackers from initiating security incidents.</p>
+                <p><strong>Example:</strong> Posting warning signs on a property.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DeterrentControl
+                        warning -->|Display signs| Intruders
+                    end
+                </div>
+            </div>
+            <!-- Detective -->
+            <div class="category" id="detective">
+                <h3>Detective</h3>
+                <p>Detective security controls focus on identifying and responding to security incidents as they occur.</p>
+                <p><strong>Example:</strong> Implementing log monitoring and analysis.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DetectiveControl
+                        logs -->|Collect data| LogServer
+                        logs -->|Analyze data| SecurityTeam
+                    end
+                </div>
+            </div>
+            <!-- Corrective -->
+            <div class="category" id="corrective">
+                <h3>Corrective</h3>
+                <p>Corrective security controls are designed to correct the impact of a security incident and prevent recurrence.</p>
+                <p><strong>Example:</strong> Applying patches to fix vulnerabilities.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CorrectiveControl
+                        patches -->|Apply patches| VulnerableSystems
+                    end
+                </div>
+            </div>
+            <!-- Compensating -->
+            <div class="category" id="compensating">
+                <h3>Compensating</h3>
+                <p>Compensating security controls are used when standard controls cannot be applied, providing an alternative safeguard.</p>
+                <p><strong>Example:</strong> Isolating a system that cannot receive regular security updates.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph CompensatingControl
+                        isolation -->|Isolate system| IsolatedSystem
+                    end
+                </div>
+            </div>
+            <!-- Directive -->
+            <div class="category" id="directive">
+                <h3>Directive</h3>
+                <p>Directive security controls include policies and procedures that guide security actions.</p>
+                <p><strong>Example:</strong> Establishing an incident response plan.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DirectiveControl
+                        plan -->|Develop plan| IncidentResponseTeam
+                        plan -->|Execute plan| IncidentResponders
+                    end
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>1.2 Security Concepts</title>
+</head>
+<body>
+    <div class="container">
+        <h1>1.2 Security Concepts</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container"></div>
+        
+        <!-- Confidentiality, Integrity, and Availability (CIA) -->
+        <div class="section" id="section-1">
+            <h2>Confidentiality, Integrity, and Availability (CIA)</h2>
+            <!-- Confidentiality -->
+            <div class="category" id="confidentiality">
+                <h3>Confidentiality</h3>
+                <p>Confidentiality ensures that information is only accessible to those who have the proper authorization.</p>
+                <p><strong>Example:</strong> Encrypting sensitive data before storage.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Encryption
+                        encryption -->|Protect data| AuthorizedUsers
+                    end
+                </div>
+            </div>
+            <!-- Integrity -->
+            <div class="category" id="integrity">
+                <h3>Integrity</h3>
+                <p>Integrity ensures that data remains accurate and unaltered during storage or transmission.</p>
+                <p><strong>Example:</strong> Using checksums to verify file integrity.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph IntegrityCheck
+                        checksum -->|Verify data| Data
+                    end
+                </div>
+            </div>
+            <!-- Availability -->
+            <div class="category" id="availability">
+                <h3>Availability</h3>
+                <p>Availability ensures that information and resources are accessible when needed.</p>
+                <p><strong>Example:</strong> Implementing redundancy to maintain system availability.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Redundancy
+                        redundancy -->|Provide backups| Systems
+                    end
+                </div>
+            </div>
+        </div>
+        
+        <!-- Non-repudiation -->
+        <div class="section" id="section-2">
+            <h2>Non-repudiation</h2>
+            <div class="category" id="non-repudiation">
+                <h3>Non-repudiation</h3>
+                <p>Non-repudiation ensures that an action or event cannot be denied by the parties involved.</p>
+                <p><strong>Example:</strong> Digital signatures on legal documents.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DigitalSignature
+                        signature -->|Authenticate sender| Sender
+                        signature -->|Verify signature| Receiver
+                    end
+                </div>
+            </div>
+        </div>
+        
+        <!-- Authentication, Authorization, and Accounting (AAA) -->
+        <div class="section" id="section-3">
+            <h2>Authentication, Authorization, and Accounting (AAA)</h2>
+            <!-- Authenticating people -->
+            <div class="category" id="authenticating-people">
+                <h3>Authenticating People</h3>
+                <p>Authenticating people involves verifying the identity of individuals.</p>
+                <p><strong>Example:</strong> Username and password authentication.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph UserAuthentication
+                        auth -->|Verify credentials| User
+                    end
+                </div>
+            </div>
+            <!-- Authenticating systems -->
+            <div class="category" id="authenticating-systems">
+                <h3>Authenticating Systems</h3>
+                <p>Authenticating systems involves verifying the identity of devices or systems.</p>
+                <p><strong>Example:</strong> Digital certificates for servers.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SystemAuthentication
+                        auth -->|Verify certificates| System
+                    end
+                </div>
+            </div>
+            <!-- Authorization models -->
+            <div class="category" id="authorization-models">
+                <h3>Authorization Models</h3>
+                <p>Authorization models define what actions users or systems are allowed to perform.</p>
+                <p><strong>Example:</strong> Role-based access control (RBAC).</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph RBAC
+                        auth -->|Assign roles| User
+                        auth -->|Grant permissions| Resources
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Gap analysis -->
+        <div class="section" id="section-4">
+            <h2>Gap Analysis</h2>
+            <div class="category" id="gap-analysis">
+                <h3>Gap Analysis</h3>
+                <p>Gap analysis is the process of evaluating the difference between current practices and desired outcomes to identify deficiencies and plan improvements.</p>
+                <p><strong>Example:</strong> Assessing the cybersecurity readiness of an organization and identifying areas that need improvement.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph GapAnalysis
+                        analysis -->|Assess current state| CurrentPractices
+                        analysis -->|Identify gaps| DesiredOutcomes
+                        analysis -->|Plan improvements| ImprovementPlan
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Zero Trust -->
+        <div class="section" id="section-5">
+            <h2>Zero Trust</h2>
+            <!-- Control Plane -->
+            <div class="category" id="control-plane">
+                <h3>Control Plane</h3>
+                <p>The Control Plane in Zero Trust includes various components and concepts for implementing a Zero Trust security model.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ControlPlane
+                        control -->|Adaptive identity| AdaptiveIdentity
+                        control -->|Threat scope reduction| ThreatScopeReduction
+                        control -->|Policy-driven access control| PolicyAccessControl
+                        control -->|Policy Administrator| PolicyAdministrator
+                    end
+                </div>
+            </div>
+            <!-- Adaptive Identity -->
+            <div class="category" id="adaptive-identity">
+                <h3>Adaptive Identity</h3>
+                <p>Adaptive identity focuses on dynamically adjusting user access based on context and behavior.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AdaptiveIdentity
+                        adaptive -->|Evaluate context| Context
+                        adaptive -->|Adjust access| Access
+                    end
+                </div>
+            </div>
+            <!-- Threat Scope Reduction -->
+            <div class="category" id="threat-scope-reduction">
+                <h3>Threat Scope Reduction</h3>
+                <p>Threat scope reduction aims to minimize the attack surface and limit potential threats.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph ThreatScopeReduction
+                        reduction -->|Reduce exposed services| ExposedServices
+                        reduction -->|Minimize privileges| Privileges
+                    end
+                </div>
+            </div>
+            <!-- Policy-driven Access Control -->
+            <div class="category" id="policy-driven-access-control">
+                <h3>Policy-driven Access Control</h3>
+                <p>Policy-driven access control enforces access rules based on defined policies and conditions.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PolicyAccessControl
+                        policycontrol -->|Define policies| Policies
+                        policycontrol -->|Enforce policies| Enforcer
+                    end
+                </div>
+            </div>
+            <!-- Policy Administrator -->
+            <div class="category" id="policy-administrator">
+                <h3>Policy Administrator</h3>
+                <p>The Policy Administrator is responsible for managing and configuring access control policies.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph PolicyAdministrator
+                        admin -->|Configure policies| Policies
+                        admin -->|Manage access| AccessControl
+                    end
+                </div>
+            </div>
+            <!-- Data Plane -->
+            <div class="category" id="data-plane">
+                <h3>Data Plane</h3>
+                <p>The Data Plane in Zero Trust includes elements related to securing data and network communications.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph DataPlane
+                        dataplane -->|Implicit trust zones| TrustZones
+                        dataplane -->|Subject/System| Subjects
+                        dataplane -->|Policy Enforcement Point| EnforcementPoint
+                    end
+                </div>
+            </div>
+            <!-- Implicit Trust Zones -->
+            <div class="category" id="implicit-trust-zones">
+                <h3>Implicit Trust Zones</h3>
+                <p>Implicit trust zones categorize and control network segments based on trust levels.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph TrustZones
+                        trustzones -->|Define zones| ZoneTypes
+                        trustzones -->|Segment networks| NetworkSegments
+                    end
+                </div>
+            </div>
+            <!-- Subject/System -->
+            <div class="category" id="subject-system">
+                <h3>Subject/System</h3>
+                <p>Subjects and systems represent entities and devices that interact within the Zero Trust architecture.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Subjects
+                        subjects -->|Identify entities| Entities
+                        subjects -->|Assign attributes| Attributes
+                    end
+                </div>
+            </div>
+            <!-- Policy Enforcement Point -->
+            <div class="category" id="policy-enforcement-point">
+                <h3>Policy Enforcement Point</h3>
+                <p>The Policy Enforcement Point (PEP) enforces access control policies in the Data Plane.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph EnforcementPoint
+                        enforcement -->|Enforce policies| Policies
+                        enforcement -->|Access control| DataTraffic
+                    end
+                </div>
+            </div>
+        </div>
+        <!-- Physical Security -->
+        <div class="section" id="section-6">
+            <h2>Physical Security</h2>
+            <!-- Bollards -->
+            <div class="category" id="bollards">
+                <h3>Bollards</h3>
+                <p>Bollards are short, sturdy posts designed to control or block vehicle access to specific areas.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Bollards
+                        bollards -->|Control vehicle access| RestrictedAreas
+                        bollards -->|Prevent ramming attacks| SecurityMeasures
+                    end
+                </div>
+            </div>
+            <!-- Access Control Vestibule -->
+            <div class="category" id="access-control-vestibule">
+                <h3>Access Control Vestibule</h3>
+                <p>An access control vestibule is an enclosed area with security measures that control entry and exit.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AccessControlVestibule
+                        vestibule -->|Control entry/exit| SecureArea
+                        vestibule -->|Security screening| Verification
+                    end
+                </div>
+            </div>
+            <!-- Fencing -->
+            <div class="category" id="fencing">
+                <h3>Fencing</h3>
+                <p>Fencing is used to create physical barriers and boundaries around a secured area.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Fencing
+                        fencing -->|Establish perimeters| SecuredArea
+                        fencing -->|Deter intruders| SecurityMeasures
+                    end
+                </div>
+            </div>
+            <!-- Video Surveillance -->
+            <div class="category" id="video-surveillance">
+                <h3>Video Surveillance</h3>
+                <p>Video surveillance involves the use of cameras to monitor and record activities in a specific area.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph VideoSurveillance
+                        surveillance -->|Monitor activities| SurveillanceFootage
+                        surveillance -->|Deter and record incidents| SecurityMeasures
+                    end
+                </div>
+            </div>
+            <!-- Security Guard -->
+            <div class="category" id="security-guard">
+                <h3>Security Guard</h3>
+                <p>A security guard is a trained professional responsible for monitoring and ensuring the security of a location.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SecurityGuard
+                        guard -->|Monitor and respond| SecurityIncidents
+                        guard -->|Provide physical presence| Deterrence
+                    end
+                </div>
+            </div>
+            <!-- Access Badge -->
+            <div class="category" id="access-badge">
+                <h3>Access Badge</h3>
+                <p>An access badge is a physical or digital credential used to grant access to secured areas.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph AccessBadge
+                        badge -->|Grant access| AuthorizedPersonnel
+                        badge -->|Track access history| SecurityRecords
+                    end
+                </div>
+            </div>
+            <!-- Lighting -->
+            <div class="category" id="lighting">
+                <h3>Lighting</h3>
+                <p>Lighting plays a crucial role in enhancing visibility and security in and around a facility.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Lighting
+                        lighting -->|Provide visibility| DarkAreas
+                        lighting -->|Deter potential threats| SecurityMeasures
+                    end
+                </div>
+            </div>
+            <!-- Sensors -->
+            <div class="category" id="sensors">
+                <h3>Sensors</h3>
+                <p>Sensors are devices used to detect specific environmental changes or events.</p>
+                <!-- Infrared -->
+                <div class="category" id="infrared">
+                    <h4>Infrared</h4>
+                    <p>Infrared sensors detect heat and motion, often used in motion-activated lighting and alarms.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph InfraredSensor
+                            infrared -->|Detect heat/motion| Motion
+                            infrared -->|Trigger alarms| SecurityMeasures
+                        end
+                    </div>
+                </div>
+                <!-- Pressure -->
+                <div class="category" id="pressure">
+                    <h4>Pressure</h4>
+                    <p>Pressure sensors can detect changes in pressure, such as when a door or window is opened.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph PressureSensor
+                            pressure -->|Detect pressure changes| Door/WindowActivity
+                            pressure -->|Activate alarms| SecurityMeasures
+                        end
+                    </div>
+                </div>
+                <!-- Microwave -->
+                <div class="category" id="microwave">
+                    <h4>Microwave</h4>
+                    <p>Microwave sensors emit microwave radiation and detect changes in reflections, often used in motion detection.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph MicrowaveSensor
+                            microwave -->|Detect reflections| Motion
+                            microwave -->|Trigger alarms| SecurityMeasures
+                        end
+                    </div>
+                </div>
+                <!-- Ultrasonic -->
+                <div class="category" id="ultrasonic">
+                    <h4>Ultrasonic</h4>
+                    <p>Ultrasonic sensors use sound waves to detect motion or proximity, commonly found in proximity sensors.</p>
+                    <div class="mermaid">
+                        flowchart
+                        subgraph UltrasonicSensor
+                            ultrasonic -->|Detect sound reflections| Motion/Proximity
+                            ultrasonic -->|Activate alarms| SecurityMeasures
+                        end
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deception and Disruption Technology -->
+        <div class="section" id="section-7">
+            <h2>Deception and Disruption Technology</h2>
+            <!-- Honeypot -->
+            <div class="category" id="honeypot">
+                <h3>Honeypot</h3>
+                <p>A honeypot is a security mechanism that lures attackers to a decoy system to gather information about their tactics.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Honeypot
+                        honeypot -->|Attract attackers| DecoySystem
+                        honeypot -->|Gather attack data| SecurityAnalysis
+                    end
+                </div>
+            </div>
+            <!-- Honeynet -->
+            <div class="category" id="honeynet">
+                <h3>Honeynet</h3>
+                <p>A honeynet is a network of honeypots designed to detect and analyze malicious activity across a broader scale.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Honeynet
+                        honeynet -->|Deploy multiple honeypots| Network
+                        honeynet -->|Collect and analyze data| SecurityAnalysis
+                    end
+                </div>
+            </div>
+            <!-- Honeyfile -->
+            <div class="category" id="honeyfile">
+                <h3>Honeyfile</h3>
+                <p>A honeyfile is a bait file or data object designed to attract and detect unauthorized access or use.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Honeyfile
+                        honeyfile -->|Create bait files| DataObjects
+                        honeyfile -->|Monitor access attempts| SecurityAnalysis
+                    end
+                </div>
+            </div>
+            <!-- Honeytoken -->
+            <div class="category" id="honeytoken">
+                <h3>Honeytoken</h3>
+                <p>A honeytoken is a unique and deliberately created piece of information used to detect unauthorized access or use.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Honeytoken
+                        honeytoken -->|Generate honeytokens| UniqueData
+                        honeytoken -->|Detect misuse| SecurityAnalysis
+                    end
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
