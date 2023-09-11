@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>2.3 Types of Vulnerabilities</title>
+</head>
+<body>
+    <div class="container">
+        <h1>2.3 Types of Vulnerabilities</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container">
+            <a href="/" class="home-icon">🏠</a>
+        </div>
+
+        <!-- Application Category -->
+        <div class="section" id="section-1">
+            <h2>Application</h2>
+            <p>Vulnerabilities related to software applications that can be exploited.</p>
+
+            <!-- Memory Injection Subcategory -->
+            <div class="category" id="memory-injection">
+                <h3>Memory Injection</h3>
+                <p>A type of vulnerability where attackers inject malicious code into the memory of an application.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a memory injection vulnerability to execute arbitrary code in an application's memory space.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph MemoryInjection
+                        box -->|Exploiting memory injection| MemoryInjectionAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Buffer Overflow Subcategory -->
+            <div class="category" id="buffer-overflow">
+                <h3>Buffer Overflow</h3>
+                <p>A vulnerability that occurs when a program writes data beyond the boundaries of an allocated buffer.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Triggering a buffer overflow to overwrite a program's memory and gain unauthorized access.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph BufferOverflow
+                        box -->|Exploiting buffer overflow| BufferOverflowAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Race Conditions Subcategory -->
+            <div class="category" id="race-conditions">
+                <h3>Race Conditions</h3>
+                <p>Vulnerabilities that result from the timing or sequencing of events in a program or system.</p>
+
+                <!-- Time-of-check (TOC) Subsubcategory -->
+                <div class="subsubcategory" id="time-of-check">
+                    <h3>Time-of-check (TOC)</h3>
+                    <p>A race condition where the checking of a condition and the execution of an action are separated in time.</p>
+
+                    <!-- Example -->
+                    <p><strong>Example:</strong> Exploiting a TOC race condition to gain unauthorized access during a time window.</p>
+
+                    <!-- Mermaid Diagram -->
+                    <div class="mermaid">
+                        flowchart
+                        subgraph TOCRaceCondition
+                            box -->|Exploiting TOC race condition| TOCRaceConditionAttack
+                        end
+                    </div>
+                </div>
+
+                <!-- Time-of-use (TOU) Subsubcategory -->
+                <div class="subsubcategory" id="time-of-use">
+                    <h3>Time-of-use (TOU)</h3>
+                    <p>A race condition where an attacker alters data or conditions after the check but before the use.</p>
+
+                    <!-- Example -->
+                    <p><strong>Example:</strong> Manipulating data during the brief time between its check and use in a program.</p>
+
+                    <!-- Mermaid Diagram -->
+                    <div class="mermaid">
+                        flowchart
+                        subgraph TOURaceCondition
+                            box -->|Exploiting TOU race condition| TOURaceConditionAttack
+                        end
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malicious Update Subcategory -->
+            <div class="category" id="malicious-update">
+                <h3>Malicious Update</h3>
+                <p>A vulnerability where attackers can introduce malicious updates or changes to software.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Inserting a malicious code update into a software package to compromise systems.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph MaliciousUpdate
+                        box -->|Exploiting malicious update| MaliciousUpdateAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Operating System (OS)-based Category -->
+        <div class="section" id="section-2">
+            <h2>Operating System (OS)-based</h2>
+            <p>Vulnerabilities associated with the operating system that attackers can target.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting an OS-based vulnerability to gain unauthorized access to a system.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph OSVulnerabilities
+                    box -->|Exploiting OS-based vulnerability| OSVulnerabilityAttack
+                end
+            </div>
+        </div>
+
+        <!-- Web-based Category -->
+        <div class="section" id="section-3">
+            <h2>Web-based</h2>
+            <p>Vulnerabilities that affect web applications and services, making them susceptible to exploitation.</p>
+
+            <!-- Structured Query Language injection (SQLi) Subcategory -->
+            <div class="category" id="sql-injection">
+                <h3>Structured Query Language injection (SQLi)</h3>
+                <p>A vulnerability that allows attackers to execute malicious SQL queries on a web application's database.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting SQL injection to retrieve sensitive data from a vulnerable website's database.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph SQLInjection
+                        box -->|Exploiting SQL injection| SQLInjectionAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Cross-site scripting (XSS) Subcategory -->
+            <div class="category" id="cross-site-scripting">
+                <h3>Cross-site scripting (XSS)</h3>
+                <p>A vulnerability that enables attackers to inject malicious scripts into web pages viewed by other users.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Executing a script on a website that affects other users and steals their information.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph XSS
+                        box -->|Exploiting XSS| XSSAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Hardware Category -->
+        <div class="section" id="section-4">
+            <h2>Hardware</h2>
+            <p>Vulnerabilities associated with hardware components and devices.</p>
+
+            <!-- Firmware Subcategory -->
+            <div class="category" id="firmware-vulnerabilities">
+                <h3>Firmware</h3>
+                <p>Vulnerabilities related to the software embedded in hardware devices.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a firmware vulnerability in a router to gain control over the device.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph FirmwareVulnerabilities
+                        box -->|Exploiting firmware vulnerability| FirmwareVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- End-of-life Subcategory -->
+            <div class="category" id="end-of-life">
+                <h3>End-of-life</h3>
+                <p>Vulnerabilities that arise when hardware devices reach the end of their supported lifespan.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Targeting a network appliance that is no longer receiving security updates.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph EndOfLifeVulnerabilities
+                        box -->|Exploiting end-of-life vulnerability| EndOfLifeVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Legacy Subcategory -->
+            <div class="category" id="legacy">
+                <h3>Legacy</h3>
+                <p>Vulnerabilities associated with outdated or legacy hardware components.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting security weaknesses in older hardware that lacks modern security features.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph LegacyVulnerabilities
+                        box -->|Exploiting legacy hardware vulnerability| LegacyVulnerabilityAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Virtualization Category -->
+        <div class="section" id="section-5">
+            <h2>Virtualization</h2>
+            <p>Vulnerabilities related to virtualization technologies and environments.</p>
+
+            <!-- Virtual machine (VM) escape Subcategory -->
+            <div class="category" id="vm-escape">
+                <h3>Virtual machine (VM) escape</h3>
+                <p>A vulnerability that allows an attacker to break out of a virtual machine and access the host system.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a VM escape vulnerability to gain unauthorized access to the host server.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph VMEscape
+                        box -->|Exploiting VM escape vulnerability| VMEscapeAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Resource reuse Subcategory -->
+            <div class="category" id="resource-reuse">
+                <h3>Resource reuse</h3>
+                <p>Vulnerabilities that involve the improper reuse of virtualized resources.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Unauthorized access to shared virtualized resources, leading to resource exhaustion.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph ResourceReuse
+                        box -->|Exploiting resource reuse vulnerability| ResourceReuseAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud-specific Category -->
+        <div class="section" id="section-6">
+            <h2>Cloud-specific</h2>
+            <p>Vulnerabilities unique to cloud computing environments.</p>
+
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting a security weakness in a cloud service configuration.</p>
+
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph CloudSpecificVulnerabilities
+                    box -->|Exploiting cloud-specific vulnerability| CloudSpecificVulnerabilityAttack
+                end
+            </div>
+
+            <!-- Insecure API Subcategory -->
+            <div class="category" id="insecure-api">
+                <h3>Insecure API</h3>
+                <p>Vulnerabilities related to insecure application programming interfaces (APIs) used in cloud services.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting an insecure API to gain unauthorized access to cloud resources.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph InsecureAPIVulnerabilities
+                        box -->|Exploiting insecure API vulnerability| InsecureAPIVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Data Exposure Subcategory -->
+            <div class="category" id="data-exposure">
+                <h3>Data Exposure</h3>
+                <p>Vulnerabilities that lead to the unauthorized exposure or leakage of sensitive data in the cloud.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Accessing confidential data due to misconfigured cloud storage settings.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph DataExposureVulnerabilities
+                        box -->|Exploiting data exposure vulnerability| DataExposureVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Identity and Access Management Subcategory -->
+            <div class="category" id="identity-access-management">
+                <h3>Identity and Access Management</h3>
+                <p>Vulnerabilities related to misconfigured identity and access management controls in cloud environments.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Unauthorized access due to weak authentication settings in cloud IAM.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph IAMVulnerabilities
+                        box -->|Exploiting IAM vulnerability| IAMVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Cloud Provider-specific Subcategory -->
+            <div class="category" id="cloud-provider-specific">
+                <h3>Cloud Provider-specific</h3>
+                <p>Vulnerabilities specific to certain cloud service providers and their configurations.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a vulnerability unique to a particular cloud provider's platform.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph CloudProviderVulnerabilities
+                        box -->|Exploiting cloud provider-specific vulnerability| CloudProviderVulnerabilityAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Supply chain Category -->
+        <div class="section" id="section-7">
+            <h2>Supply chain</h2>
+            <p>Vulnerabilities associated with the supply chain, including service providers, hardware providers, and software providers.</p>
+
+            <!-- Service provider Subcategory -->
+            <div class="category" id="service-provider">
+                <h3>Service provider</h3>
+                <p>Vulnerabilities related to third-party service providers and their offerings.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a vulnerability in a cloud service offered by a third-party provider.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph ServiceProviderVulnerabilities
+                        box -->|Exploiting service provider vulnerability| ServiceProviderVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Hardware provider Subcategory -->
+            <div class="category" id="hardware-provider">
+                <h3>Hardware provider</h3>
+                <p>Vulnerabilities related to hardware components supplied by third-party vendors.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a vulnerability in network hardware provided by an external vendor.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph HardwareProviderVulnerabilities
+                        box -->|Exploiting hardware provider vulnerability| HardwareProviderVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Software provider Subcategory -->
+            <div class="category" id="software-provider">
+                <h3>Software provider</h3>
+                <p>Vulnerabilities related to software and applications supplied by external software providers.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting a vulnerability in a third-party software application used by an organization.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph SoftwareProviderVulnerabilities
+                        box -->|Exploiting software provider vulnerability| SoftwareProviderVulnerabilityAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Cryptographic Category -->
+        <div class="section" id="section-8">
+            <h2>Cryptographic</h2>
+            <p>Vulnerabilities related to cryptographic techniques and implementations.</p>
+
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting a cryptographic flaw in an encryption algorithm to decrypt sensitive data.</p>
+
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph CryptographicVulnerabilities
+                    box -->|Exploiting cryptographic vulnerability| CryptographicVulnerabilityAttack
+                end
+            </div>
+        </div>
+
+        <!-- Misconfiguration Category -->
+        <div class="section" id="section-9">
+            <h2>Misconfiguration</h2>
+            <p>Vulnerabilities resulting from improper system or application configurations.</p>
+
+            <!-- Example -->
+            <p><strong>Example:</strong> Gaining unauthorized access to a system due to misconfigured access controls.</p>
+
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph MisconfigurationVulnerabilities
+                    box -->|Exploiting misconfiguration vulnerability| MisconfigurationVulnerabilityAttack
+                end
+            </div>
+        </div>
+
+        <!-- Mobile device Category -->
+        <div class="section" id="section-10">
+            <h2>Mobile device</h2>
+            <p>Vulnerabilities specific to mobile devices and platforms.</p>
+
+            <!-- Side loading Subcategory -->
+            <div class="category" id="side-loading">
+                <h3>Side loading</h3>
+                <p>A vulnerability that allows the installation of apps from unofficial or untrusted sources.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting sideloading vulnerabilities to install malicious apps on a mobile device.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph SideLoadingVulnerabilities
+                        box -->|Exploiting sideloading vulnerability| SideLoadingVulnerabilityAttack
+                    end
+                </div>
+            </div>
+
+            <!-- Jailbreaking Subcategory -->
+            <div class="category" id="jailbreaking">
+                <h3>Jailbreaking</h3>
+                <p>A vulnerability that allows users to remove software restrictions on mobile devices.</p>
+
+                <!-- Example -->
+                <p><strong>Example:</strong> Jailbreaking an iOS device to bypass Apple's security controls.</p>
+
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph JailbreakingVulnerabilities
+                        box -->|Exploiting jailbreaking vulnerability| JailbreakingVulnerabilityAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Zero-day Category -->
+        <div class="section" id="section-11">
+            <h2>Zero-day</h2>
+            <p>Vulnerabilities that are unknown to the vendor and have no official patch.</p>
+
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting a zero-day vulnerability to gain unauthorized access to a system.</p>
+
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph ZeroDayVulnerabilities
+                    box -->|Exploiting zero-day vulnerability| ZeroDayVulnerabilityAttack
+                end
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

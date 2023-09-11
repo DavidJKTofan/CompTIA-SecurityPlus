@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/mermaid-initialize.js" type="module"></script>
+    <script src="js/generateTOC.js"></script>
+    <script src="js/stickyTOC.js"></script>
+    <title>2.2 Common Threat Vectors and Attack Surfaces</title>
+</head>
+<body>
+    <div class="container">
+        <h1>2.2 Common Threat Vectors and Attack Surfaces</h1>
+
+        <!-- TABLE OF CONTENTS -->
+        <div id="toc" class="toc-container">
+            <a href="/" class="home-icon">🏠</a>
+        </div>
+
+        <!-- Message-based Category -->
+        <div class="section" id="section-1">
+            <h2>Message-based</h2>
+            <p>Message-based threat vectors leverage various forms of communication.</p>
+            
+            <!-- Email Subcategory -->
+            <div class="category" id="email">
+                <h3>Email</h3>
+                <p>Email-based attacks target users through email communication.</p>
+                <p><strong>Example:</strong> Phishing emails attempting to steal login credentials.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph Email
+                        email -->|Targeting users through emails| PhishingEmails
+                    end
+                </div>
+            </div>
+            
+            <!-- Short Message Service (SMS) Subcategory -->
+            <div class="category" id="sms">
+                <h3>Short Message Service (SMS)</h3>
+                <p>SMS-based threats involve malicious messages sent via SMS.</p>
+                <p><strong>Example:</strong> Receiving SMS with a link to a malicious app.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph SMS
+                        sms -->|Sending malicious SMS messages| MaliciousSMS
+                    end
+                </div>
+            </div>
+            
+            <!-- Instant messaging (IM) Subcategory -->
+            <div class="category" id="instant-messaging">
+                <h3>Instant Messaging (IM)</h3>
+                <p>IM-based threats exploit vulnerabilities in instant messaging platforms.</p>
+                <p><strong>Example:</strong> Malware spread through a compromised IM account.</p>
+                <div class="mermaid">
+                    flowchart
+                    subgraph IM
+                        im -->|Exploiting IM platform vulnerabilities| IMMalwareSpread
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Image-based Category -->
+        <div class="section" id="section-2">
+            <h2>Image-based</h2>
+            <p>Image-based threat vectors involve manipulating image files to carry out attacks.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Embedding malicious code within image files to exploit software vulnerabilities.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph ImageBased
+                    image -->|Malicious code within image files| ExploitVulnerabilities
+                end
+            </div>
+        </div>
+
+        <!-- File-based Category -->
+        <div class="section" id="section-3">
+            <h2>File-based</h2>
+            <p>File-based threat vectors exploit various file formats to deliver malware.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Malicious attachments in email messages that deliver malware when opened.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph FileBased
+                    file -->|Malicious attachments in emails| MalwareDelivery
+                end
+            </div>
+        </div>
+
+        <!-- Voice call Category -->
+        <div class="section" id="section-4">
+            <h2>Voice Call</h2>
+            <p>Voice call-based threats involve exploiting vulnerabilities in voice communication.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Voice phishing (vishing) attacks that trick users into revealing sensitive information over the phone.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph VoiceCall
+                    phone -->|Voice phishing attacks| VishingAttack
+                end
+            </div>
+        </div>
+
+        <!-- Removable Device Category -->
+        <div class="section" id="section-5">
+            <h2>Removable Device</h2>
+            <p>Threats related to removable devices involve malicious actions using external storage media.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Plugging in an infected USB drive that spreads malware upon connection.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph RemovableDevice
+                    usb -->|Infected USB drives| MalwareSpread
+                end
+            </div>
+        </div>
+
+        <!-- Vulnerable Software Category -->
+        <div class="section" id="section-6">
+            <h2>Vulnerable Software</h2>
+            <p>Threat vectors related to vulnerable software exploit weaknesses in software applications.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting known vulnerabilities in outdated web browsers.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph VulnerableSoftware
+                    database -->|Exploiting software vulnerabilities| MaliciousExploits
+                end
+            </div>
+            
+            <!-- Client-based vs. Agentless Subcategory -->
+            <div class="category" id="client-vs-agentless">
+                <h3>Client-based vs. Agentless</h3>
+                <p>Threat vectors may vary based on whether client-based or agentless methods are used.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Malware delivered through client-based software vulnerabilities vs. agentless web exploits.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph ClientVsAgentless
+                        box -->|Client-based vs. Agentless methods| MalwareDelivery
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Unsupported Systems and Applications Category -->
+        <div class="section" id="section-7">
+            <h2>Unsupported Systems and Applications</h2>
+            <p>Threat vectors targeting unsupported systems and applications take advantage of their lack of updates and security patches.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Exploiting vulnerabilities in an old and unsupported operating system.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph UnsupportedSystems
+                    box -->|Exploiting unsupported systems| SecurityVulnerabilities
+                end
+            </div>
+        </div>
+
+        <!-- Unsecure Networks Category -->
+        <div class="section" id="section-8">
+            <h2>Unsecure Networks</h2>
+            <p>Threat vectors related to unsecure networks include various network types like wireless, wired, and Bluetooth.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Intercepting data on an unsecured public Wi-Fi network.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph UnsecureNetworks
+                    wifi -->|Data interception on unsecured networks| NetworkInterception
+                end
+            </div>
+            
+            <!-- Wireless Subcategory -->
+            <div class="category" id="wireless">
+                <h3>Wireless</h3>
+                <p>Threat vectors specific to wireless networks.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Unauthorized access to an open Wi-Fi network.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph WirelessNetworks
+                        wifi -->|Unauthorized access to wireless networks| UnauthorizedAccess
+                    end
+                </div>
+            </div>
+            
+            <!-- Wired Subcategory -->
+            <div class="category" id="wired">
+                <h3>Wired</h3>
+                <p>Threat vectors specific to wired networks.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Physical network tap for eavesdropping.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph WiredNetworks
+                        cable -->|Physical network tap| Eavesdropping
+                    end
+                </div>
+            </div>
+            
+            <!-- Bluetooth Subcategory -->
+            <div class="category" id="bluetooth">
+                <h3>Bluetooth</h3>
+                <p>Threat vectors related to Bluetooth connections.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Bluetooth device spoofing to gain unauthorized access.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph BluetoothNetworks
+                        bluetooth -->|Bluetooth device spoofing| UnauthorizedAccess
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Service Ports Category -->
+        <div class="section" id="section-9">
+            <h2>Open Service Ports</h2>
+            <p>Threat vectors related to open service ports involve exploiting publicly accessible network services.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Scanning for open ports and exploiting vulnerabilities in exposed services.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph OpenServicePorts
+                    box -->|Exploiting open service ports| ServiceExploitation
+                end
+            </div>
+        </div>
+
+        <!-- Default Credentials Category -->
+        <div class="section" id="section-10">
+            <h2>Default Credentials</h2>
+            <p>Threat vectors involving default credentials exploit systems or devices that still use factory-default login credentials.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Gaining unauthorized access to a router using default username and password.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph DefaultCredentials
+                    box -->|Exploiting default credentials| UnauthorizedAccess
+                end
+            </div>
+        </div>
+
+        <!-- Supply Chain Category -->
+        <div class="section" id="section-11">
+            <h2>Supply Chain</h2>
+            <p>Threat vectors in the supply chain involve exploiting vulnerabilities within the production and distribution process.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Compromising software updates from a managed service provider.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph SupplyChain
+                    box -->|Exploiting supply chain vulnerabilities| SupplyChainCompromise
+                end
+            </div>
+            
+            <!-- Managed Service Providers Subcategory -->
+            <div class="category" id="msp">
+                <h3>Managed Service Providers (MSPs)</h3>
+                <p>Threat vectors specific to managed service providers.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Targeting vulnerabilities in services provided by an MSP.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph MSPSupplyChain
+                        box -->|Exploiting MSP vulnerabilities| MSPExploitation
+                    end
+                </div>
+            </div>
+            
+            <!-- Vendors Subcategory -->
+            <div class="category" id="vendors">
+                <h3>Vendors</h3>
+                <p>Threat vectors related to vulnerabilities in products or services provided by vendors.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Exploiting vulnerabilities in vendor-supplied software.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph VendorSupplyChain
+                        box -->|Exploiting vendor supply chain| VendorExploitation
+                    end
+                </div>
+            </div>
+            
+            <!-- Suppliers Subcategory -->
+            <div class="category" id="suppliers">
+                <h3>Suppliers</h3>
+                <p>Threat vectors related to vulnerabilities within the supply chain from suppliers.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Compromising components supplied by a third-party vendor.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph SupplierSupplyChain
+                        box -->|Exploiting supplier vulnerabilities| SupplierExploitation
+                    end
+                </div>
+            </div>
+        </div>
+
+        <!-- Human Vectors/Social Engineering Category -->
+        <div class="section" id="section-12">
+            <h2>Human Vectors/Social Engineering</h2>
+            <p>Threat vectors involving social engineering techniques that manipulate individuals into divulging confidential information or performing actions that compromise security.</p>
+            
+            <!-- Example -->
+            <p><strong>Example:</strong> Executing a phishing attack to trick a user into revealing login credentials.</p>
+            
+            <!-- Mermaid Diagram -->
+            <div class="mermaid">
+                flowchart
+                subgraph HumanVectors
+                    box -->|Exploiting human vectors/social engineering| SocialEngineering
+                end
+            </div>
+            
+            <!-- Phishing Subcategory -->
+            <div class="category" id="phishing">
+                <h3>Phishing</h3>
+                <p>Threat vectors related to deceptive attempts to obtain sensitive information.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Sending fraudulent emails impersonating a trusted entity to steal login credentials.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Phishing
+                        box -->|Exploiting phishing techniques| PhishingAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Vishing Subcategory -->
+            <div class="category" id="vishing">
+                <h3>Vishing</h3>
+                <p>Threat vectors involving voice-based social engineering attacks.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Manipulating individuals over phone calls to reveal confidential information.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Vishing
+                        box -->|Exploiting vishing techniques| VishingAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Smishing Subcategory -->
+            <div class="category" id="smishing">
+                <h3>Smishing</h3>
+                <p>Threat vectors involving SMS-based social engineering attacks.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Sending deceptive text messages to trick users into taking malicious actions.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Smishing
+                        box -->|Exploiting smishing techniques| SmishingAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Misinformation/Disinformation Subcategory -->
+            <div class="category" id="misinformation-disinformation">
+                <h3>Misinformation/Disinformation</h3>
+                <p>Threat vectors involving spreading false or misleading information.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Creating fake news or false narratives to manipulate public opinion.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph MisinformationDisinformation
+                        box -->|Exploiting misinformation/disinformation| DisinformationCampaign
+                    end
+                </div>
+            </div>
+            
+            <!-- Impersonation Subcategory -->
+            <div class="category" id="impersonation">
+                <h3>Impersonation</h3>
+                <p>Threat vectors involving impersonating individuals or entities for malicious purposes.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Posing as a colleague to deceive an employee into revealing sensitive information.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Impersonation
+                        box -->|Exploiting impersonation techniques| ImpersonationAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Business Email Compromise Subcategory -->
+            <div class="category" id="business-email-compromise">
+                <h3>Business Email Compromise</h3>
+                <p>Threat vectors involving compromising business email accounts for fraudulent activities.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Gaining unauthorized access to a CEO's email account to initiate fraudulent wire transfers.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph BEC
+                        box -->|Exploiting business email compromise| BusinessEmailCompromise
+                    end
+                </div>
+            </div>
+            
+            <!-- Pretexting Subcategory -->
+            <div class="category" id="pretexting">
+                <h3>Pretexting</h3>
+                <p>Threat vectors involving creating a fabricated scenario or pretext to deceive individuals.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Pretending to be an IT technician to gain physical access to a secure facility.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Pretexting
+                        box -->|Exploiting pretexting techniques| PretextingAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Watering Hole Subcategory -->
+            <div class="category" id="watering-hole">
+                <h3>Watering Hole</h3>
+                <p>Threat vectors involving compromising websites frequently visited by targeted individuals or groups.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Injecting malware into a legitimate website frequented by a specific organization's employees.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph WateringHole
+                        box -->|Exploiting watering hole attacks| WateringHoleAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Brand Impersonation Subcategory -->
+            <div class="category" id="brand-impersonation">
+                <h3>Brand Impersonation</h3>
+                <p>Threat vectors involving impersonating trusted brands for malicious purposes.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Creating fake websites that mimic reputable brands to steal user information.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph BrandImpersonation
+                        box -->|Exploiting brand impersonation| BrandImpersonationAttack
+                    end
+                </div>
+            </div>
+            
+            <!-- Typosquatting Subcategory -->
+            <div class="category" id="typosquatting">
+                <h3>Typosquatting</h3>
+                <p>Threat vectors involving registering domain names similar to legitimate ones to deceive users.</p>
+                
+                <!-- Example -->
+                <p><strong>Example:</strong> Registering a domain with a slight misspelling of a popular website to capture user traffic.</p>
+                
+                <!-- Mermaid Diagram -->
+                <div class="mermaid">
+                    flowchart
+                    subgraph Typosquatting
+                        box -->|Exploiting typosquatting| TyposquattingAttack
+                    end
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
